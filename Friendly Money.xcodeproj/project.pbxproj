@@ -3,29 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		35DB48C324C015F600702AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48C224C015F600702AB7 /* AppDelegate.swift */; };
 		35DB48C524C015F600702AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48C424C015F600702AB7 /* SceneDelegate.swift */; };
-		35DB48C724C015F600702AB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48C624C015F600702AB7 /* ViewController.swift */; };
 		35DB48CA24C015F600702AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DB48C824C015F600702AB7 /* Main.storyboard */; };
 		35DB48CD24C015F600702AB7 /* Friendly_Money.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48CB24C015F600702AB7 /* Friendly_Money.xcdatamodeld */; };
 		35DB48CF24C015F800702AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DB48CE24C015F800702AB7 /* Assets.xcassets */; };
 		35DB48D224C015F800702AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DB48D024C015F800702AB7 /* LaunchScreen.storyboard */; };
+		35DB48DB24C01D1500702AB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48DA24C01D1500702AB7 /* Constants.swift */; };
+		35DB48DD24C01DAF00702AB7 /* FMExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48DC24C01DAF00702AB7 /* FMExtentions.swift */; };
+		35DB48E124C02DCE00702AB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48E024C02DCE00702AB7 /* HomeViewController.swift */; };
+		35DB48E324C048D500702AB7 /* AddNewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48E224C048D500702AB7 /* AddNewFriendViewController.swift */; };
+		35DB48EB24C094EB00702AB7 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48EA24C094EB00702AB7 /* FriendsTableViewCell.swift */; };
+		35DB48ED24C0991B00702AB7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48EC24C0991B00702AB7 /* CardView.swift */; };
+		35DB48EF24C0AAFE00702AB7 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48EE24C0AAFE00702AB7 /* TransactionsViewController.swift */; };
+		35DEE4ED24C2AA930012B2DB /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEE4EC24C2AA930012B2DB /* AddTransactionViewController.swift */; };
+		35DEE4EF24C2CCC80012B2DB /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEE4EE24C2CCC80012B2DB /* TransactionTableViewCell.swift */; };
+		35DEE4F124C2E4CF0012B2DB /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEE4F024C2E4CF0012B2DB /* PaddingLabel.swift */; };
+		35DEE4F324C33C860012B2DB /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEE4F224C33C860012B2DB /* ImageScrollView.swift */; };
+		35DEE4F524C33C9D0012B2DB /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEE4F424C33C9D0012B2DB /* AttachmentViewController.swift */; };
+		880CB95C9AF1E633D507AC66 /* Pods_Friendly_Money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578236BF90942CCD59DDA8D /* Pods_Friendly_Money.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35DB48BF24C015F600702AB7 /* Friendly Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friendly Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DB48C224C015F600702AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DB48C424C015F600702AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		35DB48C624C015F600702AB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35DB48C924C015F600702AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35DB48CC24C015F600702AB7 /* Friendly_Money.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friendly_Money.xcdatamodel; sourceTree = "<group>"; };
 		35DB48CE24C015F800702AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35DB48D124C015F800702AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35DB48D324C015F800702AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35DB48DA24C01D1500702AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35DB48DC24C01DAF00702AB7 /* FMExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMExtentions.swift; sourceTree = "<group>"; };
+		35DB48E024C02DCE00702AB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		35DB48E224C048D500702AB7 /* AddNewFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFriendViewController.swift; sourceTree = "<group>"; };
+		35DB48EA24C094EB00702AB7 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		35DB48EC24C0991B00702AB7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		35DB48EE24C0AAFE00702AB7 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		35DEE4EC24C2AA930012B2DB /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		35DEE4EE24C2CCC80012B2DB /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		35DEE4F024C2E4CF0012B2DB /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		35DEE4F224C33C860012B2DB /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		35DEE4F424C33C9D0012B2DB /* AttachmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
+		5022BD468F738075DA4AEB61 /* Pods-Friendly Money.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friendly Money.debug.xcconfig"; path = "Target Support Files/Pods-Friendly Money/Pods-Friendly Money.debug.xcconfig"; sourceTree = "<group>"; };
+		5578236BF90942CCD59DDA8D /* Pods_Friendly_Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Friendly_Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		571BED4966720DAD55FF0A0E /* Pods-Friendly Money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friendly Money.release.xcconfig"; path = "Target Support Files/Pods-Friendly Money/Pods-Friendly Money.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880CB95C9AF1E633D507AC66 /* Pods_Friendly_Money.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EA3F85FF6CC1488FF1580AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5022BD468F738075DA4AEB61 /* Pods-Friendly Money.debug.xcconfig */,
+				571BED4966720DAD55FF0A0E /* Pods-Friendly Money.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		35DB48B624C015F600702AB7 = {
 			isa = PBXGroup;
 			children = (
 				35DB48C124C015F600702AB7 /* Friendly Money */,
 				35DB48C024C015F600702AB7 /* Products */,
+				1EA3F85FF6CC1488FF1580AD /* Pods */,
+				DF250CD7E1AE9D90934B6CA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +96,11 @@
 		35DB48C124C015F600702AB7 /* Friendly Money */ = {
 			isa = PBXGroup;
 			children = (
+				35DB48E424C0870E00702AB7 /* coredatamodels */,
+				35DB48DE24C02DAE00702AB7 /* ui */,
+				35DB48D924C01D0900702AB7 /* utils */,
 				35DB48C224C015F600702AB7 /* AppDelegate.swift */,
 				35DB48C424C015F600702AB7 /* SceneDelegate.swift */,
-				35DB48C624C015F600702AB7 /* ViewController.swift */,
 				35DB48C824C015F600702AB7 /* Main.storyboard */,
 				35DB48CE24C015F800702AB7 /* Assets.xcassets */,
 				35DB48D024C015F800702AB7 /* LaunchScreen.storyboard */,
@@ -70,6 +110,63 @@
 			path = "Friendly Money";
 			sourceTree = "<group>";
 		};
+		35DB48D924C01D0900702AB7 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				35DB48DA24C01D1500702AB7 /* Constants.swift */,
+				35DB48DC24C01DAF00702AB7 /* FMExtentions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		35DB48DE24C02DAE00702AB7 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				35DB48E924C094D100702AB7 /* components */,
+				35DB48DF24C02DB500702AB7 /* controllers */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		35DB48DF24C02DB500702AB7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35DB48E024C02DCE00702AB7 /* HomeViewController.swift */,
+				35DB48E224C048D500702AB7 /* AddNewFriendViewController.swift */,
+				35DB48EE24C0AAFE00702AB7 /* TransactionsViewController.swift */,
+				35DEE4EC24C2AA930012B2DB /* AddTransactionViewController.swift */,
+				35DEE4F424C33C9D0012B2DB /* AttachmentViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		35DB48E424C0870E00702AB7 /* coredatamodels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = coredatamodels;
+			sourceTree = "<group>";
+		};
+		35DB48E924C094D100702AB7 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				35DB48EA24C094EB00702AB7 /* FriendsTableViewCell.swift */,
+				35DB48EC24C0991B00702AB7 /* CardView.swift */,
+				35DEE4EE24C2CCC80012B2DB /* TransactionTableViewCell.swift */,
+				35DEE4F024C2E4CF0012B2DB /* PaddingLabel.swift */,
+				35DEE4F224C33C860012B2DB /* ImageScrollView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		DF250CD7E1AE9D90934B6CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5578236BF90942CCD59DDA8D /* Pods_Friendly_Money.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35DB48D624C015F800702AB7 /* Build configuration list for PBXNativeTarget "Friendly Money" */;
 			buildPhases = (
+				1FC429F35F7D1477532CAA21 /* [CP] Check Pods Manifest.lock */,
 				35DB48BB24C015F600702AB7 /* Sources */,
 				35DB48BC24C015F600702AB7 /* Frameworks */,
 				35DB48BD24C015F600702AB7 /* Resources */,
+				D254A6C57C0A259668A608C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +235,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FC429F35F7D1477532CAA21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Friendly Money-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D254A6C57C0A259668A608C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Friendly Money/Pods-Friendly Money-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Friendly Money/Pods-Friendly Money-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Friendly Money/Pods-Friendly Money-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35DB48BB24C015F600702AB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35DB48C724C015F600702AB7 /* ViewController.swift in Sources */,
+				35DB48DB24C01D1500702AB7 /* Constants.swift in Sources */,
+				35DEE4F324C33C860012B2DB /* ImageScrollView.swift in Sources */,
+				35DB48ED24C0991B00702AB7 /* CardView.swift in Sources */,
+				35DB48DD24C01DAF00702AB7 /* FMExtentions.swift in Sources */,
+				35DEE4ED24C2AA930012B2DB /* AddTransactionViewController.swift in Sources */,
 				35DB48C324C015F600702AB7 /* AppDelegate.swift in Sources */,
+				35DB48EF24C0AAFE00702AB7 /* TransactionsViewController.swift in Sources */,
+				35DB48EB24C094EB00702AB7 /* FriendsTableViewCell.swift in Sources */,
 				35DB48C524C015F600702AB7 /* SceneDelegate.swift in Sources */,
+				35DEE4F524C33C9D0012B2DB /* AttachmentViewController.swift in Sources */,
+				35DB48E124C02DCE00702AB7 /* HomeViewController.swift in Sources */,
 				35DB48CD24C015F600702AB7 /* Friendly_Money.xcdatamodeld in Sources */,
+				35DEE4F124C2E4CF0012B2DB /* PaddingLabel.swift in Sources */,
+				35DEE4EF24C2CCC80012B2DB /* TransactionTableViewCell.swift in Sources */,
+				35DB48E324C048D500702AB7 /* AddNewFriendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +438,7 @@
 		};
 		35DB48D724C015F800702AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5022BD468F738075DA4AEB61 /* Pods-Friendly Money.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,12 +451,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anuranbarman.Friendly-Money";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		35DB48D824C015F800702AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571BED4966720DAD55FF0A0E /* Pods-Friendly Money.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anuranbarman.Friendly-Money";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

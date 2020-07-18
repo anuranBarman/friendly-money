@@ -1,0 +1,45 @@
+PODS:
+  - DynamicBlurView (4.1.0)
+  - Material (3.1.8):
+    - Material/Core (= 3.1.8)
+  - Material/Core (3.1.8):
+    - Motion (~> 3.1.1)
+  - Motion (3.1.3):
+    - Motion/Core (= 3.1.3)
+  - Motion/Core (3.1.3)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - Material (~> 3.1.0)
+  - PopupDialog (~> 1.1)
+  - Toaster (from `https://github.com/devxoul/Toaster.git`, branch `master`)
+
+SPEC REPOS:
+  trunk:
+    - DynamicBlurView
+    - Material
+    - Motion
+    - PopupDialog
+
+EXTERNAL SOURCES:
+  Toaster:
+    :branch: master
+    :git: https://github.com/devxoul/Toaster.git
+
+CHECKOUT OPTIONS:
+  Toaster:
+    :commit: aec54fc48d3d36279424103de0784c23862d19df
+    :git: https://github.com/devxoul/Toaster.git
+
+SPEC CHECKSUMS:
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
+
+PODFILE CHECKSUM: 652a3cf5c423464bce16c2a8008cc8c800b0f175
+
+COCOAPODS: 1.8.4

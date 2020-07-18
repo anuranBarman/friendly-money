@@ -4,4 +4,6 @@ So created this dead simple app to manage money (e.g: somebody paid my lunch fee
 
 ## Screenshots
 
-![friends list](screenshots/friends_list.png "Friends List")
+![friends list](./screenshots/friends_list.png "Friends List")
+![transactions](./screenshots/transactions.png "Transactions")
+![add transaction](./screenshots/add_transaction.png "Add Transaction")

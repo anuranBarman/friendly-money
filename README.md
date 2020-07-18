@@ -4,8 +4,12 @@ So created this dead simple app to manage money (e.g: somebody paid my lunch fee
 
 ## Screenshots
 
-<img src="./screenshots/friends_list.PNG" alt="friends list" width="400" height="800"/><img src="./screenshots/transactions.PNG" alt="transactions" width="400" height="800"/>
-<img src="./screenshots/add_transaction.PNG" alt="add transactions" width="400" height="800"/>
+<table>
+<tr><td><img src="./screenshots/friends_list.PNG" alt="friends list" width="400" height="800"/></td>
+<td><img src="./screenshots/transactions.PNG" alt="transactions" width="400" height="800"/></td></tr>
+<tr><td><img src="./screenshots/add_transaction.PNG" alt="add transactions" width="400" height="800"/></td></tr>
+<table>
+
 
 ## Features
 <ul>

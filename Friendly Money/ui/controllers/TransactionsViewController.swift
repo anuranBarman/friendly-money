@@ -26,6 +26,8 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
     var summaryLabel:PaddingLabel!
     var imagePicker:UIImagePickerController = UIImagePickerController()
     var selectedTransaction:Transaction!
+    var logoImageView:UIImageView!
+    var emptyLabel:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,30 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
         txTableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
         txTableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10).isActive = true
         txTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -190).isActive = true
+        
+        logoImageView = UIImageView()
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        logoImageView.image = UIImage(named: "money")
+        
+        self.view.addSubview(logoImageView)
+        
+        logoImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        logoImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        logoImageView.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor, constant: 0).isActive = true
+        logoImageView.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor, constant: 0).isActive = true
+        
+        emptyLabel = UILabel()
+        emptyLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyLabel.text = "No Transactions Happened Yet"
+        emptyLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        emptyLabel.textAlignment = .center
+        emptyLabel.textColor = .lightGray
+        
+        self.view.addSubview(emptyLabel)
+        
+        emptyLabel.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 10).isActive = true
+        emptyLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
+        emptyLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10).isActive = true
         
         summaryCard = CardView()
         summaryCard.backgroundColor = .white
@@ -186,6 +212,13 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
                 self?.transactions = results
                 self?.txTableView.reloadData()
                 self?.setTotal()
+                if self?.transactions.count != nil && self!.transactions.count > 0 {
+                    self?.logoImageView.isHidden = true
+                    self?.emptyLabel.isHidden = true
+                }else {
+                    self?.logoImageView.isHidden = false
+                    self?.emptyLabel.isHidden = false
+                }
             }
         }catch{
             print("error at fetching transactions list \(error.localizedDescription)")

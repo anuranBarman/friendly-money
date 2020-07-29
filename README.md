@@ -17,6 +17,7 @@ So created this dead simple app to manage money (e.g: somebody paid my lunch fee
 <li>Add/Delete Transactions under a Friend</li>
 <li>Add Attachment to a Transaction</li>
 <li>Get summary for the Friend</li>
+<li>Share transactions with a Friend as text file with them</li>
 </ul>
 
 ## Libraries

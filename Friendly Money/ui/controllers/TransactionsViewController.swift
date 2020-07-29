@@ -28,6 +28,8 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
     var selectedTransaction:Transaction!
     var logoImageView:UIImageView!
     var emptyLabel:UILabel!
+    var transactionsTypeControl:UISegmentedControl!
+    var selectedSegmentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,21 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
         addButton.tintColor = .white
         let deleteButton = UIBarButtonItem(image: UIImage(named: "delete_small")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(deleteButtonTapped(_:)))
         deleteButton.tintColor = .white
-        self.navigationItem.rightBarButtonItems = [addButton,deleteButton]
+        let shareButton = UIBarButtonItem(image: UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(shareButtonTapped(_:)))
+        shareButton.tintColor = .white
+        self.navigationItem.rightBarButtonItems = [addButton,shareButton,deleteButton]
+        
+        
+        transactionsTypeControl = UISegmentedControl(items: ["ALL","BORROWED","LENT"])
+        transactionsTypeControl.selectedSegmentIndex = 0
+        transactionsTypeControl.translatesAutoresizingMaskIntoConstraints=false
+        transactionsTypeControl.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
+        
+        self.view.addSubview(transactionsTypeControl)
+        
+        transactionsTypeControl.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        transactionsTypeControl.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 10).isActive = true
+        transactionsTypeControl.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -10).isActive = true
         
         txTableView = UITableView()
         txTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +74,7 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
         
         self.view.addSubview(txTableView)
         
-        txTableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        txTableView.topAnchor.constraint(equalTo: self.transactionsTypeControl.bottomAnchor, constant: 10).isActive = true
         txTableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
         txTableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10).isActive = true
         txTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -190).isActive = true
@@ -172,6 +188,11 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
         }
     }
     
+    @objc func segmentChanged(_ sender:UISegmentedControl){
+        self.selectedSegmentIndex = sender.selectedSegmentIndex
+        self.getTransactionsList()
+    }
+    
     func setTotal(){
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -209,6 +230,15 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
                 results.sort { (tx1, tx2) -> Bool in
                     return tx1.date!.timeIntervalSince1970 >= tx2.date!.timeIntervalSince1970
                 }
+                results = results.filter({ (tx) -> Bool in
+                    if self?.selectedSegmentIndex == 1 {
+                        return tx.type == 0
+                    }else if self?.selectedSegmentIndex == 2 {
+                        return tx.type == 1
+                    }else {
+                        return true
+                    }
+                })
                 self?.transactions = results
                 self?.txTableView.reloadData()
                 self?.setTotal()
@@ -259,6 +289,21 @@ class TransactionsViewController: UIViewController,UITableViewDelegate,UITableVi
         dialog.addButtons([cancelButton,defaultButton])
         
         self.present(dialog, animated: true, completion: nil)
+    }
+    
+    @objc func shareButtonTapped(_ sender:UIBarButtonItem){
+        let text = Utility.getSharableText(friend: self.friend, transactions: self.transactions,type: self.selectedSegmentIndex)
+        let fileName = "transactions_for_\(self.friend.name!.replacingOccurrences(of: " ", with: "")).txt"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(fileName)
+            do {
+                try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
+                self.present(vc, animated: true, completion: nil)
+            }catch {
+                Toast(text: "Coult not share transactions file.").show()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

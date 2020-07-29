@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351B88D024D1CC7600E127F6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351B88CF24D1CC7600E127F6 /* Utility.swift */; };
 		35DB48C324C015F600702AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48C224C015F600702AB7 /* AppDelegate.swift */; };
 		35DB48C524C015F600702AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB48C424C015F600702AB7 /* SceneDelegate.swift */; };
 		35DB48CA24C015F600702AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DB48C824C015F600702AB7 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		351B88CF24D1CC7600E127F6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		35DB48BF24C015F600702AB7 /* Friendly Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friendly Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DB48C224C015F600702AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DB48C424C015F600702AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				35DB48DA24C01D1500702AB7 /* Constants.swift */,
 				35DB48DC24C01DAF00702AB7 /* FMExtentions.swift */,
+				351B88CF24D1CC7600E127F6 /* Utility.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				35DEE4F524C33C9D0012B2DB /* AttachmentViewController.swift in Sources */,
 				35DB48E124C02DCE00702AB7 /* HomeViewController.swift in Sources */,
 				35DB48CD24C015F600702AB7 /* Friendly_Money.xcdatamodeld in Sources */,
+				351B88D024D1CC7600E127F6 /* Utility.swift in Sources */,
 				35DEE4F124C2E4CF0012B2DB /* PaddingLabel.swift in Sources */,
 				35DEE4EF24C2CCC80012B2DB /* TransactionTableViewCell.swift in Sources */,
 				35DB48E324C048D500702AB7 /* AddNewFriendViewController.swift in Sources */,
